@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akihabara Online Store | Tech, Fashion & Gadgets</title>
+    <style>
+        :root {
+            --primary: #ff2d70;
+            --secondary: #2d9cff;
+            --dark: #1a1a2e;
+            --light: #f8f8f8;
+            --accent: #ffcc00;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--dark);
+            padding: 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .hero-content {
+            background-color: rgba(0,0,0,0.7);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        .category {
+            margin-bottom: 3rem;
+        }
+        .category-title {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            height: 200px;
+            background-color: #eee;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .product-info {
+            padding: 1rem;
+        }
+        .product-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .product-price {
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .product-rating {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e6005c;
+        }
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            .products {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            nav {
+                flex-wrap: wrap;
+            }
+            nav a {
+                margin: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Akihabara Online Store</h1>
+        <p>Tech, Clothes, Gadgets & More—At Everyday Prices!</p>
+    </header>
+    
+    <nav>
+        <a href="#electronics">Electronics</a>
+        <a href="#fashion">Fashion</a>
+        <a href="#gaming">Gaming</a>
+        <a href="#gadgets">Gadgets</a>
+        <a href="#home">Home</a>
+        <a href="#deals">Today's Deals</a>
+    </nav>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Summer Tech Festival Sale!</h2>
+            <p>Up to 50% off on select items. Limited time offer.</p>
+            <button class="btn">Shop Now</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Electronics Section -->
+        <section id="electronics" class="category">
+            <h2 class="category-title">💻 Electronics</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=NeonX+Pro+Laptop')"></div>
+                    <div class="product-info">
+                        <div class="product-title">NeonX Pro Laptop (2024)</div>
+                        <div class="product-price">$1,299.99</div>
+                        <div class="product-rating">★★★★☆ (124)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Quantum+Smartphone')"></div>
+                    <div class="product-info">
+                        <div class="product-title">Quantum X Smartphone</div>
+                        <div class="product-price">$899.99</div>
+                        <div class="product-rating">★★★★★ (89)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Hologram+Projector')"></div>
+                    <div class="product-info">
+                        <div class="product-title">HoloVision Projector</div>
+                        <div class="product-price">$349.99</div>
+                        <div class="product-rating">★★★★☆ (56)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Neon+Headphones')"></div>
+                    <div class="product-info">
+                        <div class="product-title">Neon Pulse Wireless Headphones</div>
+                        <div class="product-price">$199.99</div>
+                        <div class="product-rating">★★★★★ (203)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Fashion Section -->
+        <section id="fashion" class="category">
+            <h2 class="category-title">👗 Fashion & Lifestyle</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Cyberpunk+Jacket')"></div>
+                    <div class="product-info">
+                        <div class="product-title">Cyberpunk LED Jacket</div>
+                        <div class="product-price">$129.99</div>
+                        <div class="product-rating">★★★★☆ (78)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Anime+Hoodie')"></div>
+                    <div class="product-info">
+                        <div class="product-title">Limited Edition Anime Hoodie</div>
+                        <div class="product-price">$59.99</div>
+                        <div class="product-rating">★★★★★ (145)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Smart+Watch')"></div>
+                    <div class="product-info">
+                        <div class="product-title">Smart Glow Sneakers</div>
+                        <div class="product-price">$89.99</div>
+                        <div class="product-rating">★★★★☆ (92)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Cosplay+Set')"></div>
+                    <div class="product-info">
+                        <div class="product-title">Premium Cosplay Set</div>
+                        <div class="product-price">$149.99</div>
+                        <div class="product-rating">★★★★★ (67)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gaming Section -->
+        <section id="gaming" class="category">
+            <h2 class="category-title">🎮 Gaming</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=NextGen+Console')"></div>
+                    <div class="product-info">
+                        <div class="product-title">NextGen X Gaming Console</div>
+                        <div class="product-price">$499.99</div>
+                        <div class="product-rating">★★★★★ (312)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Gaming+Keyboard')"></div>
+                    <div class="product-info">
+                        <div class="product-title">Mecha RGB Gaming Keyboard</div>
+                        <div class="product-price">$129.99</div>
+                        <div class="product-rating">★★★★☆ (187)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=VR+Headset')"></div>
+                    <div class="product-info">
+                        <div class="product-title">Neo VR Headset (2024)</div>
+                        <div class="product-price">$399.99</div>
+                        <div class="product-rating">★★★★☆ (103)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Gaming+Chair')"></div>
+                    <div class="product-info">
+                        <div class="product-title">CyberThrone Gaming Chair</div>
+                        <div class="product-price">$299.99</div>
+                        <div class="product-rating">★★★★★ (156)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gadgets Section -->
+        <section id="gadgets" class="category">
+            <h2 class="category-title">⚡ Gadgets & More</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Hover+Drone')"></div>
+                    <div class="product-info">
+                        <div class="product-title">HoverVision 4K Drone</div>
+                        <div class="product-price">$249.99</div>
+                        <div class="product-rating">★★★★☆ (84)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Smart+Watch')"></div>
+                    <div class="product-info">
+                        <div class="product-title">NeoPulse Smart Watch</div>
+                        <div class="product-price">$179.99</div>
+                        <div class="product-rating">★★★★★ (231)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Robot+Kit')"></div>
+                    <div class="product-info">
+                        <div class="product-title">DIY Robot Builder Kit</div>
+                        <div class="product-price">$89.99</div>
+                        <div class="product-rating">★★★★☆ (47)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://via.placeholder.com/300x300?text=Levitation+Speaker')"></div>
+                    <div class="product-info">
+                        <div class="product-title">LeviSound Floating Speaker</div>
+                        <div class="product-price">$129.99</div>
+                        <div class="product-rating">★★★★★ (92)</div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div style="margin: 1rem;">
+                <h3>Shop</h3>
+                <p><a href="#" style="color: white;">Electronics</a></p>
+                <p><a href="#" style="color: white;">Fashion</a></p>
+                <p><a href="#" style="color: white;">Gaming</a></p>
+                <p><a href="#" style="color: white;">Gadgets</a></p>
+            </div>
+            <div style="margin: 1rem;">
+                <h3>Help</h3>
+                <p><a href="#" style="color: white;">Customer Service</a></p>
+                <p><a href="#" style="color: white;">Shipping</a></p>
+                <p><a href="#" style="color: white;">Returns</a></p>
+                <p><a href="#" style="color: white;">FAQ</a></p>
+            </div>
+            <div style="margin: 1rem;">
+                <h3>About</h3>
+                <p><a href="#" style="color: white;">Our Story</a></p>
+                <p><a href="#" style="color: white;">Careers</a></p>
+                <p><a href="#" style="color: white;">Blog</a></p>
+                <p><a href="#" style="color: white;">Press</a></p>
+            </div>
+            <div style="margin: 1rem;">
+                <h3>Connect</h3>
+                <p><a href="#" style="color: white;">Twitter</a></p>
+                <p><a href="#" style="color: white;">Instagram</a></p>
+                <p><a href="#" style="color: white;">Discord</a></p>
+                <p><a href="#" style="color: white;">YouTube</a></p>
+            </div>
+        </div>
+        <p style="margin-top: 2rem;">© 2024 Akihabara Online Store. All rights reserved.</p>
+        <p>Tech, Clothes, Gadgets & More—At Everyday Prices!</p>
+    </footer>
+</body>
+</html>
